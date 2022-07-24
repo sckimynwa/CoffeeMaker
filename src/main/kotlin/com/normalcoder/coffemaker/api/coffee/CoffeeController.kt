@@ -9,8 +9,7 @@ class CoffeeController(
     private val coffeeService: CoffeeService
 ) {
     @GetMapping("coffee/info")
-    fun getCoffeeInfo(request: HttpServletRequest): CoffeeInfoResponse {
-        val coffeeId = request.getAttribute("id") as Int
-        return coffeeService.getCoffeeInfo(coffeeId)
+    fun getAllCoffee(request: HttpServletRequest): List<CoffeeInfo> {
+        return coffeeService.getAllCoffee()
     }
 }
