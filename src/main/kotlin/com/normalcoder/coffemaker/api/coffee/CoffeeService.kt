@@ -9,4 +9,11 @@ class CoffeeService(
     fun getAllCoffee(): List<CoffeeInfo> {
         return coffeeRepository.findAll();
     }
+
+    fun createCoffee(request: CoffeeInfoRequest): CoffeeInfo {
+        return coffeeRepository.save(CoffeeInfo(
+            name = request.name,
+            price = request.price
+        ))
+    }
 }
