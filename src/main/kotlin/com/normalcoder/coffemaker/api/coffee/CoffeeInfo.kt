@@ -11,7 +11,7 @@ import javax.persistence.Table
 class CoffeeInfo (
     @Id
     @GeneratedValue
-    val id: Int? = null,
-    val name: String? = null,
-    val price: String? = null
+    val id: Long? = null,
+    var name: String? = null,
+    var price: String? = null
 )
