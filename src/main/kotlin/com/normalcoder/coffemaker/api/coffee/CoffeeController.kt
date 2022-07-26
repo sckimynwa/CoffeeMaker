@@ -18,7 +18,6 @@ class CoffeeController(
 
     @PostMapping("coffee/info")
     fun createCoffee(@RequestBody requestBody: CoffeeInfoRequest): CoffeeInfo {
-        println(requestBody)
         return coffeeService.createCoffee(CoffeeInfoRequest(
             name = requestBody.name,
             price = requestBody.price
